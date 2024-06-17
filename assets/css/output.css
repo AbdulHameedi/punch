@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+}
+nav section:first-child{
+    background-color: black;
+    color: white;
+    padding: 6px 6% 6px 6%;
+}
