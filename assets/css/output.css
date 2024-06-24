@@ -11,6 +11,9 @@ a{
     text-decoration: none;
     color: black;
 }
+nav{
+    margin-bottom: 1rem;
+}
 nav section:first-child{
     background-color: black;
     color: white;
@@ -37,7 +40,9 @@ nav section div:nth-child(2) img{
 }
 #nav-search p:first-child{
     background-color: var(--red);
-    padding:3px 6px 3px 6px;
+    padding: 6px;
+    display: flex;
+    align-items: center;
     border-radius: 50%;
 }
 #nav-search p:first-child svg{
@@ -54,14 +59,27 @@ nav section div:nth-child(2) img{
 }
 nav section:nth-child(3){
     padding: 0.7rem 6% 0.7rem 6%;
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
     overflow-x: hidden;
     border-top: 1px solid;
     border-bottom: 1px solid;
 }
+nav section:nth-child(3) div{ 
+    display: flex;   
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
 nav section:nth-child(3) div{
     overflow-x: scroll;
     scrollbar-width: none;
+}
+main{
+    padding: 6px 6% 6px 6%;
+}
+main div:first-child{
+    background-color: #F0F0F0;
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    font-size: smaller;    
 }
