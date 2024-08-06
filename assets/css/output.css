@@ -7,6 +7,13 @@
     box-sizing: border-box;
     font-family: "Work Sans", sans-serif;
 }
+@media screen and (min-width: 1536px){
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
 a{
     text-decoration: none;
     color: black;
@@ -76,10 +83,101 @@ nav section:nth-child(3) div{
 main{
     padding: 6px 6% 6px 6%;
 }
-main div:first-child{
+main #hero-ads{
     background-color: #F0F0F0;
     display: flex;
     justify-content: center;
     height: 100px;
-    font-size: smaller;    
+    padding-top: 0.5rem;
+    margin-bottom: 70px;
+}
+main #hero-ads p{
+    font-size: x-small;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+}
+section.notify{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.hidden{
+  display: none !important;
+}
+#subscribeMessage{
+    background-color: white;
+    border-radius: 0px 0px 8px 8px;
+    width: 500px;
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px rgb(231, 230, 230);
+}
+#subscribe{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+#subscribe div{
+    display: flex;
+    justify-content: right;
+    gap: 8px;
+}
+#subscribe button{
+    padding: 0.9rem;
+    border: none;
+    border-radius: 7px;
+    font-size: medium;
+    color: #0078D1;
+    background: none;
+}
+#subscribe button:nth-child(2){
+    background-color: #0078D1;
+    color: white;
+}
+div.latest-news{
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+section.latest-top-news{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+div.in-latest-news{
+    border-bottom: solid 1px gray;
+    padding: 15px 0 15px 25px;
+    border-left: solid 1px gray;
+    position: relative;
+}
+div.in-latest-news::before{
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: -5px;
+    width: 10px;
+    height: 10px;
+    background-color: #E7131A;
+    border-radius: 50%; 
+}
+div.in-latest-news small:first-child{
+    color: var(--red);
+    font-style: italic;
+}
+div.in-latest-news p{
+    font-size: medium;
+}
+div.latest-top-news h3{
+    position: relative;
+    padding-left: 25px;
+}
+div.latest-top-news h3::before{
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background-color: var(--red);
 }
