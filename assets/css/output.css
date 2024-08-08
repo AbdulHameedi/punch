@@ -145,13 +145,15 @@ section.latest-top-news{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
-div.in-latest-news{
-    border-bottom: solid 1px gray;
-    padding: 15px 0 15px 25px;
+div.before-style{
     border-left: solid 1px gray;
+    padding: 15px 0 15px 25px;
     position: relative;
 }
-div.in-latest-news::before{
+div.top-style{
+    padding: 15px 0;
+}
+div.before-style::before{
     content: '';
     position: absolute;
     top: 20px;
@@ -159,7 +161,10 @@ div.in-latest-news::before{
     width: 10px;
     height: 10px;
     background-color: #E7131A;
-    border-radius: 50%; 
+    border-radius: 50%;
+}
+div.in-latest-news{
+    border-bottom: solid 1px gray;
 }
 div.in-latest-news small:first-child{
     color: var(--red);
