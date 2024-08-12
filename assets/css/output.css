@@ -144,6 +144,7 @@ div.latest-news{
 section.latest-top-news{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 div.before-style{
     border-left: solid 1px gray;
@@ -185,4 +186,18 @@ div.latest-top-news h3::before{
     width: 15px;
     height: 15px;
     background-color: var(--red);
+}
+div.img-top{
+    position: relative;
+}
+div.latest-img h1{
+    position: absolute;
+    background-color: #E2E2E2;
+    padding: 40px 25px;
+    font-size: 25px;
+    bottom: 30px;
+}
+div.latest-img img{
+    width: 500px;
+    height: 400px;
 }
