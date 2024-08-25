@@ -191,7 +191,7 @@ section.latest-top-news h3::before, .top-videos-section h1::before{
     height: 15px;
     background-color: var(--red);
 }
-div.img-top{
+div.latest-img{
     position: relative;
 }
 div.latest-img h1{
@@ -199,7 +199,7 @@ div.latest-img h1{
     background-color: #E2E2E2;
     padding: 40px 25px;
     font-size: 25px;
-    bottom: 30px;
+    bottom: 0;
 }
 div.latest-img img{
     width: 500px;
