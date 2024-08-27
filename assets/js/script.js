@@ -9,8 +9,8 @@ let formatDate = newDate.toLocaleDateString('en-Us', options);
 document.getElementById('currentDate').textContent = formatDate
 
 async function fetchNews(){
-    const apiKey = 'b5851b515f021a17742f1e16094eb745';
-    const api = `https://gnews.io/api/v4/search?q=example&apikey=${apiKey}`
+    const apiKey = '8a42509e81124c1db54a222d1a2aefba';
+    const api = `https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=${apiKey}`
     const apiLatest=  `${api}&pageSize=5&page=2`;
     const apiTop =  `${api}&pageSize=5&page=1`;
     try{
@@ -46,8 +46,9 @@ async function fetchNews(){
         })
         // top news
         const topInLatest = document.querySelectorAll('.latest-news')[1];
+        const topVideo = document.querySelector('.top-videos-img');
         topArticles.forEach(topArticle=>{
-            let {description} = topArticle;
+            let {description,urlToImage} = topArticle;
             if(description){
                 description=description.split(' ').slice(0,11).join(' ')
             }
@@ -59,6 +60,17 @@ async function fetchNews(){
                 </div>
             `;
             topInLatest.appendChild(topLatestNews);
+
+            // top-videos
+            const topVideoDiv = document.createElement('div');
+            topVideoDiv.innerHTML=`
+                <div>
+                    <img src="${urlToImage}" alt="topVideos">
+                    <p class="top-video-overlay"></p>
+                    <p class="top-video-text">${description}</p>
+                </div>
+            `;
+            topVideo.appendChild(topVideoDiv)
         })
 
         // img-in-between
@@ -66,11 +78,12 @@ async function fetchNews(){
         const imgTopDiv = document.createElement('div')
         imgTopDiv.innerHTML=`
             <div class="latest-img">
-                <img class="" src="${articles[0].image}" alt="img-main">
+                <img class="" src="${articles[0].urlToImage}" alt="img-main">
                 <h1>${articles[0].description}</h1>
             </div>
         `;
         imgTop.appendChild(imgTopDiv)
+
         
     }catch(error){
         console.log('Error fetching news', error)

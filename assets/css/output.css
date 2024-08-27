@@ -191,7 +191,7 @@ section.latest-top-news h3::before, .top-videos-section h1::before{
     height: 15px;
     background-color: var(--red);
 }
-div.img-top{
+div.latest-img{
     position: relative;
 }
 div.latest-img h1{
@@ -199,7 +199,7 @@ div.latest-img h1{
     background-color: #E2E2E2;
     padding: 40px 25px;
     font-size: 25px;
-    bottom: 30px;
+    bottom: 0;
 }
 div.latest-img img{
     width: 500px;
@@ -250,6 +250,31 @@ div.top-videos-img{
     overflow-x: auto;
     gap: 20px;
     padding: 20px 0;
+    margin-bottom: 10px;
+}
+div.top-videos-img div{
+    position: relative;
+}
+div.top-videos-img img{
+    height: 250px;
+    width: 330px;
+}
+p.top-video-text{
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    color: white;
+    font-weight: 500;
+    font-size: large;
+}
+p.top-video-overlay{
+    position: absolute;
+    opacity: 0.3;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
 }
 .button-top{
     display: flex;
@@ -258,5 +283,14 @@ div.top-videos-img{
 .button-top button{
     background-color: rgb(255,0,0);
     color: white;
-    padding: 10px;
+    padding: 10px 30px;
+    border-radius: 9px;
+}
+section.top-videos-section h1::after{
+    content: '';
+    position: absolute;
+    background-color: gray;
+    width: 90%;
+    height: 3%;
+    bottom: 0;
 }
