@@ -46,8 +46,9 @@ async function fetchNews(){
         })
         // top news
         const topInLatest = document.querySelectorAll('.latest-news')[1];
+        const topVideo = document.querySelector('.top-videos-img');
         topArticles.forEach(topArticle=>{
-            let {description} = topArticle;
+            let {description,urlToImage} = topArticle;
             if(description){
                 description=description.split(' ').slice(0,11).join(' ')
             }
@@ -59,6 +60,17 @@ async function fetchNews(){
                 </div>
             `;
             topInLatest.appendChild(topLatestNews);
+
+            // top-videos
+            const topVideoDiv = document.createElement('div');
+            topVideoDiv.innerHTML=`
+                <div>
+                    <img src="${urlToImage}" alt="topVideos">
+                    <p class="top-video-overlay"></p>
+                    <p class="top-video-text">${description}</p>
+                </div>
+            `;
+            topVideo.appendChild(topVideoDiv)
         })
 
         // img-in-between
@@ -71,6 +83,7 @@ async function fetchNews(){
             </div>
         `;
         imgTop.appendChild(imgTopDiv)
+
         
     }catch(error){
         console.log('Error fetching news', error)
