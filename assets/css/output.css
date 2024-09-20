@@ -339,3 +339,87 @@ div.get-metro-texts div{
 .all-metro div:first-child h1:first-child{
     margin-bottom: 20px;
 }
+.all-metro{
+    padding-bottom: 40px;
+}
+footer{
+    background-color: black;
+    color: white;
+    padding: 66px 6% 6px 6%;
+}
+footer a{
+    color: white;
+    display: block;
+}
+footer img:first-child{
+    width: 150px;
+    margin-bottom: 40px;
+}
+div.footer-links{
+    display: flex;
+    gap: 10px;
+}
+div.footer-links div{
+    max-width: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+footer section{
+    display: flex;
+}
+div.search-newsletter{
+    position: relative;
+    margin-bottom: 20px;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+div.search-newsletter input{
+    width: 15rem;
+    /* padding: 10px; */
+    border-radius: 20px;
+    height: 42px;
+    background-color: #4D4D4D;
+    color: white;
+    outline: none;
+}
+div.search-newsletter input::placeholder{
+    background-color: #4D4D4D;
+    color: white;
+    padding: 10px;
+}
+div.search-newsletter p{
+    position: absolute;
+    right: 0;
+    top: 4px;
+    background-color: white;
+    padding: 5px 7px;
+    border-radius: 50%;
+}
+div.search-newsletter svg{
+    color: black;
+}
+div.subscribe-newsletter{
+    display: flex;
+    background-color: white;
+    color: black;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    gap: 5px;
+    padding: 10px;
+    font-size: small;
+    font-weight: bold;
+    width: 15rem;
+    margin-bottom: 20px;
+}
+div.footer-links-ii{
+    display: flex;
+    gap: 20px;
+}
+div.footer-links-ii p{
+    background-color: #4D4D4D;
+    padding: 5px;
+    border-radius: 5px;
+}
